@@ -1,0 +1,124 @@
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	direction: rtl;
+
+}
+#header{
+	display: grid;
+	grid-template-columns: 8fr 4fr;
+	grid-column-gap: 5%;
+	margin-bottom: 5%;
+}
+.header-left{
+	background-color: lightgray;
+	border-radius: 0.4em;
+	
+}
+.header-right{
+	display: grid;
+	justify-content: center;
+	background-color: lightgray;
+	border-radius: 0.4em;
+}
+.header-right p{
+	color: white;
+	font-weight: 400;
+}
+#content{
+display: inline-flex;
+grid-template-columns: 8fr 4fr;
+margin-bottom: 2%;
+}
+/*slider*/
+#slider-wrapper{
+	overflow: hidden;
+
+}
+.slider{
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-rows: auto auto;
+}
+#row1{
+	display: inline-flex;
+	margin-bottom: 0.6em;
+	animation-name: ease;
+}
+#row2{
+	display: inline-flex;
+	direction: ltr;
+}
+.img{
+	margin-right: 1em;
+}
+img{
+	height: 250px;
+	border-radius: 0.4em;
+	margin-right: 0.6em;
+	animation-name: ease;
+}
+.prev, .next{
+	cursor: pointer;
+	width: 10%;
+}
+/*.prev img:hover{
+	background-image: url("Assets/arrow-blue-left.png");
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 50px;
+
+}
+.next img:hover{
+	background-image: url("Assets/arrow-blue-right.png");
+	background-repeat: no-repeat;
+	height: 50px;
+	z-index: 1;
+}*/
+.n-p_btn{
+	position: absolute;
+	right: 700px;
+}
+.n-p_btn img{
+	display: block;
+	height: 50px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+/*end of slider*/
+#txt{
+	direction: ltr;
+	width: 30%;
+	display: grid;
+	margin: auto;
+	margin-left: 2%;
+}
+#txt h2{
+	color: #0B2C7F;
+    font-family: Verdana;
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+#txt p{
+	color: darkgray;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 25px;
+}
+/*footer*/
+#footer{
+	background-color: lightgray;
+	display: grid;
+	grid-template-columns: auto;
+	border-radius: 0.4em;
+	direction: ltr;
+
+}	
+#footer p{
+	color: white;
+    padding-left: 5em;
+    font-weight: 400;
+}

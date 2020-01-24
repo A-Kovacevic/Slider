@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section id="header">
+		<div class="header-right">
+			<p>Skup drugih elemenata na stranici</p>
+		</div>
+		<div class="header-left">	
+
+		</div>
+
+	</section>
+	<section id="content">
+		<div id="txt">
+			<h2>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h2>
+			<p> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+		</div>
+		
+
+		<div id="slider-wrapper">
+			<div class="slider">
+				<div id="row1">
+
+				</div>
+				<div id="row2">
+
+					<div class="n-p_btn">
+					<a class="prev" onclick="prev()"><img src="Assets/arrow-gray-left.png"></a>
+					<a class="next" onclick="next()"><img src="Assets/arrow-gray-right.png"></a>	
+					
+					</div>
+				</div>
+
+				<script type="text/javascript">
+					var imgarray = new Array();
+					var imgs= document.createElement("img");
+					var element=document.getElementById("row1");
+					//add img
+					imgarray[0]=new Image();
+					imgarray[0].src='Assets/slider-image-1.jpg';
+					element.appendChild(imgarray[0]);
+					imgarray[1]=new Image();
+					imgarray[1].src='Assets/slider-image-2.jpg';
+					element.appendChild(imgarray[1]);
+					imgarray[2]=new Image();
+					imgarray[2].src='Assets/slider-image-3.jpg';
+					element.appendChild(imgarray[2]);
+					imgarray[3]=new Image();
+					imgarray[3].src='Assets/slider-image-4.jpg';
+					element.appendChild(imgarray[3]);
+					imgarray[4]=new Image();
+					imgarray[4].src='Assets/slider-image-5.jpg';
+					element.appendChild(imgarray[4]);
+					//add img sec row
+					var element2=document.getElementById("row2");
+					imgarray[0]=new Image();
+					imgarray[0].src='Assets/slider-image-6.jpg';
+					element2.appendChild(imgarray[0]);
+					imgarray[1]=new Image();
+					imgarray[1].src='Assets/slider-image-7.jpg';
+					element2.appendChild(imgarray[1]);
+					imgarray[2]=new Image();
+					imgarray[2].src='Assets/slider-image-8.jpg';
+					element2.appendChild(imgarray[2]);
+					imgarray[3]=new Image();
+					imgarray[3].src='Assets/slider-image-9.jpg';
+					element2.appendChild(imgarray[3]);
+
+					//function next
+					var btns=document.getElementById("row1");
+					var last=btns.lastChild;
+					var btns2=document.getElementById("row2");
+					var last2=btns2.lastChild;
+					function next(){
+						var list=document.getElementById("row1");
+						list.insertBefore(last, list.childNodes[0]);
+						//list.style.animation-name="ease";
+						var list2=document.getElementById("row2");
+						list2.insertBefore(last2, list2.childNodes[0]);
+						/*last2.style.animation-name="slidein";*/
+					}
+
+					/*radi samo za jednu sliku..
+	last childu dodat klasu active koja bi se klikom na next prevacila na prethodnu sliku, a last child se prebacio na prvo mjesto*/		/*var aaa=document.getElementById("row1");
+					var img =aaa.getElementsByTagName("img");
+					function addClass(){
+						var t= img.lastChild;
+						var newclass=t.createAttribute("class");
+						newclass.value="active";
+						img.setAttributeNode(newclass)
+						}*/
+
+					//function prev
+					var btni=document.getElementById("row1");
+					var first=btni.firstChild;
+					function prev(){
+						var liist=document.getElementById("row1");
+						var imgg=liist.getElementsByTagName("img")[0];
+						liist.insertAdjacentElement("afterend",img);
+					}
+				</script>
+			</div>
+		</div>
+		
+
+	</section>
+			<section id="footer">
+			<p>Skup drugih elemenata na stranici</p>
+		</section>
+
+</body>
+</html>
